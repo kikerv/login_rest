@@ -24,12 +24,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = config('SECRET_KEY')
-#SECRET_KEY = os.environ['SECRET_KEY']
+SECRET_KEY = os.environ['SECRET_KEY']
 #SECRET_KEY = 'django-insecure-l4j%i_je*7@(4yig6lkcc4#8==a!-^k7#&xx)1&2-)x6y_9x(5'
-SECRET_KEY = os.getenv('SECRET_KEY')
+#SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
-#DEBUG = os.environ['DEBUG']
+#DEBUG = os.getenv('DEBUG')
+DEBUG = os.environ['DEBUG']
 #DEBUG = config('DEBUG', cast=bool)
 #DEBUG = False
 
@@ -111,7 +111,7 @@ WSGI_APPLICATION = 'login_rest.wsgi.application'
 }'''
 
 #DB Postgres --> Heroku
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ['POSTGRES_DB'],
@@ -120,7 +120,7 @@ WSGI_APPLICATION = 'login_rest.wsgi.application'
         'HOST': os.environ['POSTGRES_HOST'],
         'PORT': os.environ['POSTGRES_PORT'],
     }
-}'''
+}
 
 '''DATABASES = {
     'default': {
@@ -133,7 +133,7 @@ WSGI_APPLICATION = 'login_rest.wsgi.application'
     }
 }'''
 
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.getenv('POSTGRES_DB'),
@@ -142,7 +142,7 @@ DATABASES = {
         'HOST': os.getenv('POSTGRES_HOST'),
         'PORT': os.getenv('POSTGRES_PORT'),
     }
-}
+}'''
 
 
 # Password validation
