@@ -25,13 +25,13 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # SECURITY WARNING: keep the secret key used in production secret!
 #SECRET_KEY = config('SECRET_KEY')
 #SECRET_KEY = os.environ['SECRET_KEY']
-#SECRET_KEY = 'django-insecure-l4j%i_je*7@(4yig6lkcc4#8==a!-^k7#&xx)1&2-)x6y_9x(5'
-SECRET_KEY = os.getenv('SECRET_KEY')
+SECRET_KEY = 'django-insecure-l4j%i_je*7@(4yig6lkcc4#8==a!-^k7#&xx)1&2-)x6y_9x(5'
+#SECRET_KEY = os.getenv('SECRET_KEY')
 
-DEBUG = os.getenv('DEBUG')
+#DEBUG = os.getenv('DEBUG')
 #DEBUG = os.environ['DEBUG']
 #DEBUG = config('DEBUG', cast=bool)
-#DEBUG = False
+DEBUG = False
 
 # SECURITY WARNING: don't run with debug turned on in production!
 #Preprod
@@ -111,7 +111,7 @@ WSGI_APPLICATION = 'login_rest.wsgi.application'
 }'''
 
 #DB Postgres --> Heroku
-DATABASES = {
+'''DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': os.environ['POSTGRES_DB'],
@@ -120,18 +120,18 @@ DATABASES = {
         'HOST': os.environ['POSTGRES_HOST'],
         'PORT': os.environ['POSTGRES_PORT'],
     }
-}
+}'''
 
-'''DATABASES = {
+DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'd4ug7b0ev7o013',
-        'USER': 'qvohjvhurffnqt',
-        'PASSWORD': '202a148b22b1c83b5360967308aa751da0789dbe252ab7911b1dd9f006c71877',
-        'HOST': 'ec2-63-32-248-14.eu-west-1.compute.amazonaws.com',
+        'NAME': 'd5u5u7s5g2c485',
+        'USER': 'oossluwkbdmkhf',
+        'PASSWORD': 'f0f34d4b88aa7a1673a803488c5a73c4f1533b68a3604ad6a5c6fd683d980684',
+        'HOST': 'ec2-52-208-164-5.eu-west-1.compute.amazonaws.com',
         'PORT': '5432',
     }
-}'''
+}
 
 '''DATABASES = {
     'default': {
